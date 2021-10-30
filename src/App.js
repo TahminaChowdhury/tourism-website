@@ -13,6 +13,12 @@ import Banner from "./components/Banner/Banner";
 import Signup from "./components/Signup/Signup";
 import NotFound from "./components/Notfound/NotFound";
 import AuthProver from "./contextApi/AuthProver";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import HotelDetails from "./components/HotelDetails/HotelDetails";
+import MyOrders from "./components/Pages/MyOrders/MyOrders"
+import ManageAllOrders from "./components/Pages/ManageAllOrders/ManageAllOrders"
+import AddNewService from "./components/Pages/AddNewService/AddNewService"
+import Reservation from "./components/Reservation/Reservation";
 
 function App() {
 
@@ -27,12 +33,24 @@ function App() {
             <Home></Home>
          </Route>
 
+         <Route path="/banner">
+            <Banner></Banner>
+         </Route>
+
          <Route path="/home">
             <Home></Home>
          </Route>
 
-         <Route path="/banner">
-            <Banner></Banner>
+         <Route path="/myorders">
+            <MyOrders></MyOrders>
+         </Route>
+
+         <Route path="/manageallorders">
+            <ManageAllOrders></ManageAllOrders>
+         </Route>
+
+         <Route path="/addnewservice">
+            <AddNewService></AddNewService>
          </Route>
 
          <Route path="/login">
@@ -42,6 +60,18 @@ function App() {
          <Route path="/signup">
           <Signup></Signup>
          </Route>
+
+          <Route path="/hoteldetails">
+            <HotelDetails></HotelDetails>
+          </Route>
+          <PrivateRoute path="/hotels/:id">
+            <HotelDetails></HotelDetails>
+          </PrivateRoute>
+
+          <Route path="/reservation">
+            <Reservation></Reservation>
+          </Route>
+
         <Route exact path="*">
           <NotFound></NotFound>
         </Route>

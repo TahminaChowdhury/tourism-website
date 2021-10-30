@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Hotels from '../Hotels/Hotels';
 
@@ -13,13 +13,15 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Container>
             <Row>
             {
-                hotels.map(hotel => <Hotels 
+                hotels.map((hotel, index) => <Hotels 
                     key={hotel._id}
                     hotel={hotel}></Hotels>)
             }
             </Row>
+            </Container>
         </div>
     );
 };

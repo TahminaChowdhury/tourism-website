@@ -1,23 +1,26 @@
-import Button from '@restart/ui/esm/Button';
-import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
 const Hotels = (props) => {
-    const {_id,name,location,description,img} =props.hotel
+    const {_id, name, location, description, img} =props.hotel;
     return (
-        <Col md={4}>
-            <Card>
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Link to="/login">
-                <button className="btn btn-primary">Book Now</button>
-                </Link>
-            </Card.Body>
-            </Card>
-        </Col>
+        <Col className="col-md-4 col-lg-4 g-5 box">
+        <div className="card p-2 h-100">
+          <div className="h-100">
+          <Image src={img} thumbnail></Image>
+          <h5 className="fw-bold">{name}</h5>
+          <p className="text-start">{description.slice(0, 100)}...</p>
+          </div>
+          <Card.Footer className="text-center my-2">
+          <Link to={`/service/${_id}`}>
+            <button className="btn btn-regular">View Details <i class="fas fa-arrow-right"></i></button>
+            </Link>
+          </Card.Footer>
+        </div>
+      </Col>
     );
 };
 
 export default Hotels;
+
