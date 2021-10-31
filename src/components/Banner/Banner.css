@@ -1,6 +1,10 @@
 .top-banner{
-    background-image: url('../../images/dhaka_to_coxs_bazar.jpg');
+    background-color: black;
     background-size:1410px;
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 500px;
+}
+.banner img{
+    width: 220px;
+    height: 250px;
 }

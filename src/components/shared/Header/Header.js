@@ -8,28 +8,33 @@ const Header = () => {
     const {user, logOut} = useAuth();
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="dark" >
-            <Container className="nav-bar">
-            <Navbar.Brand className="text-dark">Guesterra</Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="nav-bar">
+            <Container>
+            <i class="fas fa-hotel icon me-2"></i>
+            <Navbar.Brand className="fw-bold"><span>GUEST</span>erra.</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ms-auto">
-                <NavLink to="/myorders">My Orders </NavLink>
-                <NavLink to="/manageallorders">Manage All Orders</NavLink>
-                <NavLink to="/addnewservice">Add A New Service</NavLink>
+                
+                <Nav className="me-auto text-white">
+                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contactus">Contact Us</NavLink>
+                {user?.email ? <NavLink to="/mybookings">My Bookings</NavLink>: ""}
+                {user?.email ? <NavLink to="/manageallbookings">Manage All Bookings</NavLink> : ""}
+                {user?.email ? <NavLink to="/addnewservice">Add A New Service</NavLink> : ""}
                 </Nav>
-                <Nav>
+                <Nav className="ms-auto">
                 {
                     user?.email ?
-                    <button onClick={logOut} className="btn rounded-pill">log out</button>
+                    <button onClick={logOut} className="btn btn-outline-light rounded-pill px-3">log out</button>
                     :
                     <Link to="/login">
-                    <button className="btn btn-regular rounded-pill">log in</button>
+                    <button className="btn  btn-outline-light rounded-pill px-3">log in</button>
                     </Link>
                 }
-                 <span className="ms-2 me-3 fw-bold fs-5 ">or</span>
+                 <span className="ms-3 me-3 fw-bold fs-5 text-white">or</span>
                     <Link to="/signup">
-                    <button className="btn rounded-pill">Sign-up</button>
+                    <button className="btn btn-outline-light rounded-pill px-3">Sign-up</button>
                 </Link>
                 </Nav>
             </Navbar.Collapse>
@@ -40,3 +45,4 @@ const Header = () => {
 };
 
 export default Header;
+

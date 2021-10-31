@@ -1,0 +1,21 @@
+
+.login{
+    border: 1px solid white;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+input{
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+ 
+}
+a{
+    text-decoration: none;
+}
+.google-signin{
+    margin-left: 85px;
+}

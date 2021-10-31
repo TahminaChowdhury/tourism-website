@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 const Reservation = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
+      data.status = "Pending"
         fetch("http://localhost:5000/bookings", {
         method: "POST",
         headers: { "content-type": "application/json" },

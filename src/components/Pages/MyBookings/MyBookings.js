@@ -1,21 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import './ManageAllOrders.css'
 import { Table } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 
-const ManageAllOrders = () => {
+const MyBookings = () => {
+    const {user} = useAuth();
     const [details, setDetails] = useState([]);
+    const [isDelete, setIsDelete] = useState(null);
     useEffect(() => {
-        fetch("http://localhost:5000/bookings")
+        fetch(`http://localhost:5000/bookings/${user?.email}`)
         .then(res => res.json())
         .then(data => setDetails(data))
-    },[])
-
-    const handleDeleteBtn = (index) =>{
-        
+    },[isDelete])
+    const handleDeleteBtn = (id) =>{
+        fetch(`http://localhost:5000/bookings/${id}`,{
+            method: "DELETE",
+            headers: { "Content-type": "application/json" },
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.deletedCount) {
+                alert("Are yoy sure want to delete ?")
+                setIsDelete(true);
+              } else {
+                setIsDelete(false);
+              }
+        });
     }
     return (
         <div>
-            <Table striped bordered hover>
+             <Table striped bordered hover>
                 <thead>
                     <tr>
                     <th>#</th>
@@ -51,7 +64,7 @@ const ManageAllOrders = () => {
 }
                             </td>
                             <td className="text-white">
-                                <button className="btn text-white">DELETE</button>
+                            <button onClick={()=>handleDeleteBtn(detail._id)} className="btn regular-btn fw-bold m-2">DELETE</button>
                             </td>
                             
                             </tr>
@@ -64,4 +77,4 @@ const ManageAllOrders = () => {
     );
 };
 
-export default ManageAllOrders;
+export default MyBookings;

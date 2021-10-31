@@ -15,10 +15,13 @@ import NotFound from "./components/Notfound/NotFound";
 import AuthProver from "./contextApi/AuthProver";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import HotelDetails from "./components/HotelDetails/HotelDetails";
-import MyOrders from "./components/Pages/MyOrders/MyOrders"
-import ManageAllOrders from "./components/Pages/ManageAllOrders/ManageAllOrders"
+import MyBookings from "./components/Pages/MyBookings/MyBookings"
+import ManageAllBookings from "./components/Pages/ManageAllBookings/ManageAllBookings"
 import AddNewService from "./components/Pages/AddNewService/AddNewService"
 import Reservation from "./components/Reservation/Reservation";
+import UpdateStatus from "./components/UpdateStatus/UpdateStatus";
+import About from "./components/About/About";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
 
@@ -41,17 +44,17 @@ function App() {
             <Home></Home>
          </Route>
 
-         <Route path="/myorders">
-            <MyOrders></MyOrders>
-         </Route>
+          <Route path="/mybookings">
+            <MyBookings></MyBookings>
+          </Route>
 
-         <Route path="/manageallorders">
-            <ManageAllOrders></ManageAllOrders>
-         </Route>
+          <Route path="/manageallbookings">
+            <ManageAllBookings></ManageAllBookings>
+          </Route>
 
-         <Route path="/addnewservice">
+          <Route path="/addnewswevice">
             <AddNewService></AddNewService>
-         </Route>
+          </Route>
 
          <Route path="/login">
             <Login></Login>
@@ -71,7 +74,17 @@ function App() {
           <Route path="/reservation">
             <Reservation></Reservation>
           </Route>
+          <Route path="/updatestatus">
+            <UpdateStatus></UpdateStatus>
+          </Route>
 
+          <Route path="/about">
+            <About></About>
+          </Route>
+
+          <Route path="/contactus">
+            <ContactUs></ContactUs>
+          </Route>
         <Route exact path="*">
           <NotFound></NotFound>
         </Route>

@@ -13,7 +13,7 @@ const Hotels = (props) => {
           <p className="text-start">{description.slice(0, 100)}...</p>
           </div>
           <Card.Footer className="text-center my-2">
-          <Link to={`/service/${_id}`}>
+          <Link to={`/hotels/${_id}`}>
             <button className="btn btn-regular">View Details <i class="fas fa-arrow-right"></i></button>
             </Link>
           </Card.Footer>
