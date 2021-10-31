@@ -5,7 +5,7 @@ const Reservation = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
       data.status = "Pending"
-        fetch("http://localhost:5000/bookings", {
+        fetch("https://rocky-inlet-36889.herokuapp.com/bookings", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),
@@ -13,21 +13,22 @@ const Reservation = () => {
     };
 
     return (
-        <div className="container text-center m-5 p-5">
+        <div className="bg">
+          <div className=" container text-center mb-5 pb-5">
+          <h1 className="text-center mb-5 pt-5 text-primary">Make Your Reservation</h1>
              <form onSubmit={handleSubmit(onSubmit)}>
-                <label>First Name:</label>
-                <input {...register("name", { required: true })} className="p-2 m-2 w-25"/>
+                <input {...register("name", { required: true })} className="p-2 m-2 w-25" placeholder="Name"/>
                 <br />
-                <label>Mobile:</label>
-                <input type="mobile" {...register("mobile")} className="p-2 m-2 w-25"/>
+  
+                <input type="mobile" {...register("mobile")} className="p-2 m-2 w-25" placeholder="Mobile"/>
                 <br />
-                <label>Email:</label>
-                <input {...register("email")} className="p-2 m-2 w-25"/>
+      
+                <input {...register("email")} className="p-2 m-2 w-25"placeholder="Email"/>
                 <br />
-                <label>Address:</label>
-                <input {...register("address")} className="p-2 m-2 w-25"/>
+    
+                <input {...register("address")} className="p-2 m-2 w-25"placeholder="Address"/>
                 <br />
-                <label>Room/Suite Type:</label>
+           
                 <select {...register("roomType")} className="p-2 m-2 w-25">
                 <option value="room/suiteType">Room/Suite Type</option>
                 <option value="Regular Room">Regular Room</option>
@@ -36,31 +37,32 @@ const Reservation = () => {
                 <option value="Madhurima Suite">Madhurima Suite</option>
                 </select>
                 <br />
-                <label>Number of room/suit:</label>
-                <input type="number" {...register("totalRoom", { min: 1, max: 10 })}className="p-2 m-2 w-25"/>
+          
+                <input type="number" {...register("totalRoom", { min: 1, max: 10 })}className="p-2 m-2 w-25"placeholder="Number Of Room"/>
                 <br />
-                <label>Number of Persons:</label>
-                <input type="number" {...register("totalPerson", { min: 1, max: 10 })} className="p-2 m-2 w-25"/>
+       
+                <input type="number" {...register("totalPerson", { min: 1, max: 10 })} className="p-2 m-2 w-25"placeholder="Number Of Persons"/>
                 <br />
-                <label>Any special request?:</label>
-                <input {...register("specialRequest")} className="p-2 m-2 w-25"/>
+       
+                <input {...register("specialRequest")} className="p-2 m-2 w-25"placeholder="Special Request"/>
                 <br />
-                <label>Check-in Date:</label>
+               
                 <input
                 {...register("checkInDate")}
                 type="date"
-                className="p-2 m-2 w-25"
+                className="p-2 m-2 w-25" value="Check In Date"
               />
                 <br />
-                <label>Check-Out Date:</label>
+  
                 <input
                 {...register("checkOutDate")}
                 type="date"
-                className="p-2 m-2 w-25"
+                className="p-2 m-2 w-25" value="Check Out Date"
               />
               <br />
-              <input type="submit" value="Book Now" className="btn btn-primary"/>
+              <input type="submit" value="Book Now" className="btn btn-primary mt-3"/>
             </form>
+            </div>
         </div>
     );
 };

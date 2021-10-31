@@ -16,13 +16,15 @@ const Header = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 
                 <Nav className="me-auto text-white">
-                <NavLink to="/home">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/login">Reservation</NavLink>
                 <NavLink to="/contactus">Contact Us</NavLink>
                 {user?.email ? <NavLink to="/mybookings">My Bookings</NavLink>: ""}
                 {user?.email ? <NavLink to="/manageallbookings">Manage All Bookings</NavLink> : ""}
-                {user?.email ? <NavLink to="/addnewservice">Add A New Service</NavLink> : ""}
+                {user?.email ? <NavLink to="/addnewservice">Add New Service</NavLink> : ""}
                 </Nav>
+                <Navbar.Text className="me-3 fs-5 fw-bold text-white">
+                    Signed in as: <span className="text-primary">{user?.displayName}</span> 
+                </Navbar.Text>
                 <Nav className="ms-auto">
                 {
                     user?.email ?

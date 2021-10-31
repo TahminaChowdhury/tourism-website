@@ -52,7 +52,7 @@ function App() {
             <ManageAllBookings></ManageAllBookings>
           </Route>
 
-          <Route path="/addnewswevice">
+          <Route path="/addnewservice">
             <AddNewService></AddNewService>
           </Route>
 
@@ -71,10 +71,15 @@ function App() {
             <HotelDetails></HotelDetails>
           </PrivateRoute>
 
+          <PrivateRoute path="/reservetion">
+            <Reservation></Reservation>
+          </PrivateRoute>
+
           <Route path="/reservation">
             <Reservation></Reservation>
           </Route>
-          <Route path="/updatestatus">
+
+          <Route path="/updatestatus/:id">
             <UpdateStatus></UpdateStatus>
           </Route>
 

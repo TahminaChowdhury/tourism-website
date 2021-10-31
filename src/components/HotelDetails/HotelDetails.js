@@ -9,7 +9,7 @@ const HotelDetails = (params) => {
  
   const [details, setDetails] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/hotels/${id}`)
+    fetch(`https://rocky-inlet-36889.herokuapp.com/hotels/${id}`)
     .then(res => res.json())
     .then(data => setDetails(data))
   },[])

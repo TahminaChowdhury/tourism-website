@@ -1,10 +1,13 @@
 .top-banner{
-    background-color: black;
+    background-image: url("../../images/beautiful-view-empire-states-skyscrapers-new-york-city_181624-6295.jpg");
     background-size:1410px;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 1000px;
 }
 .banner img{
     width: 220px;
     height: 250px;
+}
+body{
+    overflow-x: hidden;
 }

@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     },[isDelete,])
 
     const handleDeleteBtn = (id) =>{
-        fetch(`https://rocky-inlet-36889.herokuapp.com/bookings/${id}`,{
+        fetch(`https://rocky-inlet-36889.herokuapp.com/${id}`,{
             method: "DELETE",
             headers: { "Content-type": "application/json" },
         })
@@ -68,10 +68,7 @@ const ManageAllOrders = () => {
                             </td>
                             <td className="text-white">{detail?.status}</td>
                             <td className="text-white">
-                                <Link to="/updatestatus"><button className="btn regular-btn fw-bold m-2">Update Status</button></Link>
-                            </td>
-                            <td className="text-white">
-                                <button onClick={()=>handleDeleteBtn(detail._id)} className="btn regular-btn fw-bold m-2">DELETE</button>
+                                <button onClick={()=>handleDeleteBtn(detail._id)} className="btn regular-btn fw-bold m-2">Delete</button>
                             </td>
                             
                             </tr>

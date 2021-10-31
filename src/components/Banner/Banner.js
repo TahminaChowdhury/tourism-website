@@ -6,33 +6,10 @@ import './Banner.css'
 const Banner = () => {
     return (
         <div className="top-banner">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4 col-sm-4">
-                        <div className="my-5 py-5">
-                            <h1 className="text-white">Welcome to <br /> GUESTerra</h1>
-                        </div>
-                    </div>
-                    <div className="col-md-8 col-sm-8">
-                        <div className="row banner my-5 py-5">
-                            <div className="col-md-4 ">
-                                <div>
-                                <Image src='https://i.ibb.co/PYtL0ph/maldives-island-74190-478.jpg' rounded></Image>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                            <div>
-                                <Image src='https://i.ibb.co/jDqv1c9/skyscrapers-building-new-york-city-181624-5718.jpg' rounded></Image>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                            <div>
-                                <Image src='https://i.ibb.co/vvg0MRM/elegant-hotel-room-with-big-bed-1203-1494.jpg' rounded></Image>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="p-5">
+                <h1 >Welcome To</h1>
+                <h1>GUESTerra</h1>
+                <p>Enjoy Not-Your-House Places. Stop Posting Pictures of Your Cat. Start Posting Pictures of Your Getaway! Great Deals to Send Your Loved Ones Somewhere Nice and Close or Far. Your Choice. Collect Reward Stamps. Family-Friendly Hotels. Flexible Payment Options.</p>
             </div>
         </div>
     );

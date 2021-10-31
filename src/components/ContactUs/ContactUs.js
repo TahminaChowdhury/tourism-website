@@ -12,7 +12,7 @@ const ContactUs = () => {
                 <div class="card-img-overlay text">
                     <div className="m-5 p-5">
                         <h3>Contact-Info</h3>
-                        <h5><i class="far fa-envelope"></i>        Email:mindhealthclinic@gmail.com</h5>
+                        <h5><i class="far fa-envelope"></i>        Email:guesterra@gmail.com</h5>
                         <h5><i class="fas fa-phone-alt"></i> Call us: 01755-555-80</h5>
                         <h5><i class="fas fa-map-marker-alt"></i>Sector-1,Road-3,Uttara,Dhaka-1230</h5>
                     </div>

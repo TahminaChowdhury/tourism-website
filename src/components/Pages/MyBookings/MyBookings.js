@@ -7,12 +7,12 @@ const MyBookings = () => {
     const [details, setDetails] = useState([]);
     const [isDelete, setIsDelete] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings/${user?.email}`)
+        fetch(`https://rocky-inlet-36889.herokuapp.com/bookings/${user?.email}`)
         .then(res => res.json())
         .then(data => setDetails(data))
     },[isDelete])
     const handleDeleteBtn = (id) =>{
-        fetch(`http://localhost:5000/bookings/${id}`,{
+        fetch(`https://rocky-inlet-36889.herokuapp.com/bookings/${id}`,{
             method: "DELETE",
             headers: { "Content-type": "application/json" },
         })

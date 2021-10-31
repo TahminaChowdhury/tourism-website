@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import './Home.css'
+import { Container, Image, Row } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Hotels from '../Hotels/Hotels';
 
@@ -14,6 +15,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Container>
+                <h1 className="text-center">Hotels Near To Tourist Spots</h1>
             <Row>
             {
                 hotels.map((hotel, index) => <Hotels 
@@ -27,3 +29,4 @@ const Home = () => {
 };
 
 export default Home;
+
