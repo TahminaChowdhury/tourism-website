@@ -9,6 +9,10 @@ const ManageAllOrders = () => {
         .then(res => res.json())
         .then(data => setDetails(data))
     },[])
+
+    const handleDeleteBtn = (index) =>{
+        
+    }
     return (
         <div>
             <Table striped bordered hover>
@@ -46,8 +50,9 @@ const ManageAllOrders = () => {
                             Check-out-data{detail?.checkOutDate
 }
                             </td>
-                            <td></td>
-                            
+                            <td className="text-white">
+                                <button className="btn text-white">DELETE</button>
+                            </td>
                             
                             </tr>
                         </tbody>
