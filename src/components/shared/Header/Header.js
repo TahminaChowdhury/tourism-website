@@ -10,33 +10,34 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="nav-bar">
             <Container>
-            <i class="fas fa-hotel icon me-2"></i>
-            <Navbar.Brand className="fw-bold"><span>GUEST</span>erra.</Navbar.Brand>
+            <i class="fas fa-hotel icon me-2 logo"></i>
+            <Navbar.Brand className="fw-bold"><span className="logo fs-2">GUEST</span>erra.</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 
-                <Nav className="me-auto text-white">
+                <Nav className="ms-auto text-white">
                 <NavLink to="/login">Reservation</NavLink>
                 <NavLink to="/contactus">Contact Us</NavLink>
                 {user?.email ? <NavLink to="/mybookings">My Bookings</NavLink>: ""}
                 {user?.email ? <NavLink to="/manageallbookings">Manage All Bookings</NavLink> : ""}
                 {user?.email ? <NavLink to="/addnewservice">Add New Service</NavLink> : ""}
                 </Nav>
-                <Navbar.Text className="me-3 fs-5 fw-bold text-white">
-                    Signed in as: <span className="text-primary">{user?.displayName}</span> 
-                </Navbar.Text>
+                
                 <Nav className="ms-auto">
+                <Navbar.Text className="me-3 fs-5 fw-bold text-white">
+                    Signed in as: <span className="logo">{user?.displayName}</span> 
+                </Navbar.Text>
                 {
                     user?.email ?
-                    <button onClick={logOut} className="btn btn-outline-light rounded-pill px-3">log out</button>
+                    <button onClick={logOut} className="rounded-pill px-3 py-2 btn-regular text-white">log out</button>
                     :
                     <Link to="/login">
-                    <button className="btn  btn-outline-light rounded-pill px-3">log in</button>
+                    <button className="rounded-pill px-3 py-2 btn-regular text-white">log in</button>
                     </Link>
                 }
                  <span className="ms-3 me-3 fw-bold fs-5 text-white">or</span>
                     <Link to="/signup">
-                    <button className="btn btn-outline-light rounded-pill px-3">Sign-up</button>
+                    <button className=" rounded-pill px-3 py-2 btn-regular text-white">Sign-up</button>
                 </Link>
                 </Nav>
             </Navbar.Collapse>

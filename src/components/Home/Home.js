@@ -25,9 +25,9 @@ const Home = () => {
         <div>
    
             <Banner></Banner>
-            <Container>
-                <h1 className="text-center">Hotels Near To Tourist Spots</h1>
-            <Row className="my-5 py-5">
+            <Container className="mt-5">
+                <h1 className="heading">Hotels Near To Tourist Spots</h1>
+            <Row className="mb-5 pb-5">
             {
                 hotels.map((hotel, index) => <Hotels 
                     key={hotel._id}
@@ -36,7 +36,7 @@ const Home = () => {
             </Row>
             </Container>
             <Container>
-                <h1>Discover New Cities</h1>
+                <h1 className="heading">Discover New Cities</h1>
                 <Row>
                     <Col md={3} className="my-3">
                     <Card className="h-100">
@@ -160,15 +160,15 @@ const Home = () => {
                 </Col>
                 </Row>
 
-                <Row className="my-5 py-5">
-                    <h1>Visitor experience</h1>
+                <Row className="my-5 py-5 bg">
+                    <h1 className="mb-5 heading">Visitor experience</h1>
                     <Col md={4}>
                         <div className="d-flex ">
                             <div className="visitor-exp">
                                 <Image src="https://i.ibb.co/cvjvL5N/thoughtful-blonde-forty-years-old-european-woman-wears-spectacles-knitted-orange-sweater-pointing-co.jpg" roundedCircle  alt="" />
                             </div>
                             <div className="p-3">
-                                <p>Great Experience.They provide good service.well mannered staff</p>
+                                <p className="">Great Experience.They provide good service.well mannered staff.</p>
                             </div>
                         </div>
                     </Col>
@@ -178,7 +178,7 @@ const Home = () => {
                                 <Image src="https://i.ibb.co/5rwNjvD/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-ta.jpg" roundedCircle  alt="" />
                             </div>
                             <div className="p-3">
-                                <p>Great Experience.They provide good service.well mannered staff</p>
+                                <p>Great Experience.They provide good service.well mannered staff.</p>
                             </div>
                         </div>
                     </Col>
@@ -188,13 +188,13 @@ const Home = () => {
                                 <Image src="https://i.ibb.co/5T7d4qj/portrait-cheerful-handsome-man-keeps-hands-together-smiles-broadly-dressed-elegant-shirt-273609-1660.jpg" roundedCircle  alt="" />
                             </div>
                             <div className="p-3">
-                                <p>Great Experience.They provide good service.well mannered staff</p>
+                                <p>Great Experience.They provide good service.well mannered staff.</p>
                             </div>
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <h1>Your services</h1>
+                <Row className="my-5 py-5">
+                    <h1 className="heading">Your services</h1>
                     {
                         addServices.map(service =>  <Col md={3} className="my-3">
                         <Card className="h-100">

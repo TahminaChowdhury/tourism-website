@@ -9,7 +9,7 @@ const Footer = () => {
                <div className="row d-flex justify-content-between">
                     <div className="col-sm-6 col-md-4 col-lg-4">
                     <div className=" text-start">
-                        <h4>Gusterra</h4>
+                        <h1 className="heading">Gusterra</h1>
                         <p>Enjoy Not-Your-House Places. Stop Posting Pictures of Your Cat. Start Posting Pictures of Your Getaway! Great Deals to Send Your Loved Ones Somewhere Nice and Close or Far. Your Choice. Collect Reward Stamps. Family-Friendly Hotels. Flexible Payment Options.</p>
                     </div>
                     </div>

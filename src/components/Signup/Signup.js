@@ -6,12 +6,12 @@ import useAuth from '../../hooks/useAuth';
 const Signup = () => {
     const {error, handleEmail, handlePassword, handleSignup, handleResetPassword} =useAuth();
     return (
-        <div>
-            <div className="d-flex justify-content-center">
-            
-            <div className="">
-               <img src="https://i.ibb.co/7Kns58C/sign-concept-illustration-114360-5425.jpg" alt="" />
+        <div className="my-5">
+            <div className="row my-5">
+            <div className="col-md-6 col-sm-12">
+               <img src="https://i.ibb.co/7Kns58C/sign-concept-illustration-114360-5425.jpg" alt="" className="img-fluid"/>
             </div>
+            <div className="col-md-6 col-sm-12">
             <div className="login mt-5 pt-5">
                 <h2 className="mt-5">Sign up</h2>
                 <span>Already have an account?</span> <Link to="/login">Login</Link>
@@ -29,7 +29,7 @@ const Signup = () => {
                     <h5 className="text-danger my-3">{error}</h5>
                     <button type="submit" className="btn btn-primary rounded-pill w-75 mt-3 ms-5">Sign up</button>
                 </form>
-                
+            </div>
             </div>
         </div>
         </div>

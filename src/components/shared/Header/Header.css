@@ -1,4 +1,6 @@
-
+.logo{
+    color: rgb(199, 67, 255);
+}
 .nav-bar a{
     text-decoration: none;
     color: white;
@@ -11,4 +13,8 @@
 .text-color{
     color: white;
     font-size: 30px;
+}
+.btn-regular{
+    background-color: rgb(133, 8, 187);
+    border-color: darkviolet;
 }

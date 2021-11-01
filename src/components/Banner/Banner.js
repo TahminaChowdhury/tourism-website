@@ -15,11 +15,11 @@ const Banner = () => {
                             />
                             <div className="container">
                             <Card.ImgOverlay className="text-dark m-5 text-center">
-                                <Card.Title className="fs-1 text-primary ">Find Your Perfect Hotel</Card.Title>
+                                <Card.Title className="fs-1 heading ">Find Your Perfect Hotel</Card.Title>
                                 <Card.Text >
-                                <h5>Enjoy Not-Your-House Places. Stop Posting Pictures of Your Cat. <br /> Start Posting Pictures of Your Getaway! Great Deals to Send <br /> Your Loved Ones Somewhere Nice and Close or Far. Your Choice. <br /> Collect Reward Stamps. Family-Friendly Hotels. Flexible Payment Options.</h5>
+                                <h5> Great Deals to Send <br /> Your Loved Ones Somewhere Nice and Close or Far</h5>
                                 </Card.Text>
-                                <button className="btn btn-primary">Log in</button>
+                                <button className="btn btn-regular text-white">Log in</button>
                             </Card.ImgOverlay>
                             </div>
                             <Carousel.Caption>

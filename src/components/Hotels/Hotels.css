@@ -1,3 +1,9 @@
-.name{
-    color: darkblue;
+.color{
+    color: rgb(85, 9, 117);
+}
+.btn-regular{
+    background-color: rgb(85, 9, 117);
+}
+.card{
+    border-color: rgb(203, 115, 241);
 }
