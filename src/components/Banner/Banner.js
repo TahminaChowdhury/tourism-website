@@ -1,20 +1,56 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+import { Card, Carousel, Image } from 'react-bootstrap';
 import './Banner.css'
 
 
 const Banner = () => {
     return (
-        <div className="top-banner">
-            <div className="p-5">
-                <h1 >Welcome To</h1>
-                <h1>GUESTerra</h1>
-                <p>Enjoy Not-Your-House Places. Stop Posting Pictures of Your Cat. Start Posting Pictures of Your Getaway! Great Deals to Send Your Loved Ones Somewhere Nice and Close or Far. Your Choice. Collect Reward Stamps. Family-Friendly Hotels. Flexible Payment Options.</p>
-            </div>
+        <div className="">
+                 <Carousel fade>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="https://i.ibb.co/vvg0MRM/elegant-hotel-room-with-big-bed-1203-1494.jpg"
+                            alt="First slide"
+                            />
+                            <div className="container">
+                            <Card.ImgOverlay className="text-dark m-5 text-center">
+                                <Card.Title className="fs-1 text-primary ">Find Your Perfect Hotel</Card.Title>
+                                <Card.Text >
+                                <h5>Enjoy Not-Your-House Places. Stop Posting Pictures of Your Cat. <br /> Start Posting Pictures of Your Getaway! Great Deals to Send <br /> Your Loved Ones Somewhere Nice and Close or Far. Your Choice. <br /> Collect Reward Stamps. Family-Friendly Hotels. Flexible Payment Options.</h5>
+                                </Card.Text>
+                                <button className="btn btn-primary">Log in</button>
+                            </Card.ImgOverlay>
+                            </div>
+                            <Carousel.Caption>
+                            
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="https://i.ibb.co/M5sFYy2/swimming-pool-74190-2104.jpg"
+                            alt="Second slide"
+                            />
+                            <Carousel.Caption>
+                    
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="https://i.ibb.co/N2FpG1D/illuminated-city-night-1127-2144.jpg"
+                            alt="Third slide"
+                            />
+                              
+                            <Carousel.Caption>
+                           
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                </Carousel>
         </div>
     );
 };
 
 export default Banner;
-
 

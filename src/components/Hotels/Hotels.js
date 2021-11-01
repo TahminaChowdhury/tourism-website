@@ -16,7 +16,7 @@ const Hotels = (props) => {
           </div>
           <Card.Footer className="text-center my-2">
           <Link to={`/hotels/${_id}`}>
-            <button className="btn btn-regular">View Details <i class="fas fa-arrow-right"></i></button>
+            <button className="btn btn-regular">Reserve Now <i class="fas fa-arrow-right"></i></button>
             </Link>
           </Card.Footer>
         </div>
