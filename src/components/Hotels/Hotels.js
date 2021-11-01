@@ -1,9 +1,14 @@
-import { Card, Col, Image } from 'react-bootstrap';
+import { Card, Col, Image, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import './Hotels.css'
 
 
 const Hotels = (props) => {
+  const {isLoading} =useAuth();
+  if (isLoading) {
+    return <div className="text-center"><Spinner animation="border" variant="dark" /></div>
+  }
     const {_id, name, location, description, img} =props.hotel;
     return (
         <Col className="col-md-4 col-lg-4 g-5">
