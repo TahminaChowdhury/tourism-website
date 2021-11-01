@@ -20,7 +20,6 @@ import ManageAllBookings from "./components/Pages/ManageAllBookings/ManageAllBoo
 import AddNewService from "./components/Pages/AddNewService/AddNewService"
 import Reservation from "./components/Reservation/Reservation";
 import UpdateStatus from "./components/UpdateStatus/UpdateStatus";
-import About from "./components/About/About";
 import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
@@ -81,10 +80,6 @@ function App() {
 
           <Route path="/updatestatus/:id">
             <UpdateStatus></UpdateStatus>
-          </Route>
-
-          <Route path="/about">
-            <About></About>
           </Route>
 
           <Route path="/contactus">

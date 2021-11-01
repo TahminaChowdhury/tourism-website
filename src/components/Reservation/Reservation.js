@@ -50,14 +50,14 @@ const Reservation = () => {
                 <input
                 {...register("checkInDate")}
                 type="date"
-                className="p-2 m-2 w-25" value="Check In Date"
+                className="p-2 m-2 w-25"
               />
                 <br />
   
                 <input
                 {...register("checkOutDate")}
                 type="date"
-                className="p-2 m-2 w-25" value="Check Out Date"
+                className="p-2 m-2 w-25"
               />
               <br />
               <input type="submit" value="Book Now" className="btn btn-primary mt-3"/>

@@ -11,6 +11,8 @@ const MyBookings = () => {
         .then(res => res.json())
         .then(data => setDetails(data))
     },[isDelete])
+
+    // hndle delete
     const handleDeleteBtn = (id) =>{
         fetch(`https://rocky-inlet-36889.herokuapp.com/bookings/${id}`,{
             method: "DELETE",
@@ -19,7 +21,7 @@ const MyBookings = () => {
         .then(res => res.json())
         .then(data => {
             if (data.deletedCount) {
-                alert("Are yoy sure want to delete ?")
+                alert("Are you sure want to delete ?")
                 setIsDelete(true);
               } else {
                 setIsDelete(false);

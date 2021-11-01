@@ -4,7 +4,8 @@ import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-const ManageAllOrders = () => {
+
+const ManageAllBookings = () => {
     const [details, setDetails] = useState([]);
     const [isDelete, setIsDelete] = useState(null);
 
@@ -12,17 +13,18 @@ const ManageAllOrders = () => {
         fetch("https://rocky-inlet-36889.herokuapp.com/bookings")
         .then(res => res.json())
         .then(data => setDetails(data))
-    },[isDelete,])
+    },[isDelete])
 
+    // handle delete
     const handleDeleteBtn = (id) =>{
-        fetch(`https://rocky-inlet-36889.herokuapp.com/${id}`,{
+        fetch(`https://rocky-inlet-36889.herokuapp.com/bookings/${id}`,{
             method: "DELETE",
             headers: { "Content-type": "application/json" },
         })
         .then(res => res.json())
         .then(data => {
             if (data.deletedCount) {
-                alert("Are yoy sure want to delete ?")
+                alert("Are you sure want to delete ?")
                 setIsDelete(true);
               } else {
                 setIsDelete(false);
@@ -68,9 +70,11 @@ const ManageAllOrders = () => {
                             </td>
                             <td className="text-white">{detail?.status}</td>
                             <td className="text-white">
+                                <Link to={`updatestatus/${detail._id}`}><button className="btn regular-btn fw-bold m-2">Update</button></Link>
+                            </td>
+                            <td className="text-white">
                                 <button onClick={()=>handleDeleteBtn(detail._id)} className="btn regular-btn fw-bold m-2">Delete</button>
                             </td>
-                            
                             </tr>
                         </tbody>
                         )
@@ -80,4 +84,4 @@ const ManageAllOrders = () => {
     );
 };
 
-export default ManageAllOrders;
+export default ManageAllBookings;
