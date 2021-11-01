@@ -8,12 +8,18 @@ import Hotels from '../Hotels/Hotels';
 const Home = () => {
 
     const [hotels, setHotels] = useState([]);
+    const [addServices, setaddServices] = useState([]);
     useEffect(() => {
         fetch("https://rocky-inlet-36889.herokuapp.com/hotels")
         .then(res => res.json())
         .then(data => setHotels(data))
     },[])
 
+    useEffect(() => {
+        fetch("https://rocky-inlet-36889.herokuapp.com/addService")
+        .then(res => res.json())
+        .then(data => setaddServices(data))
+    },[])
     
     return (
         <div>
@@ -186,6 +192,24 @@ const Home = () => {
                             </div>
                         </div>
                     </Col>
+                </Row>
+                <Row>
+                    <h1>Your services</h1>
+                    {
+                        addServices.map(service =>  <Col md={3} className="my-3">
+                        <Card className="h-100">
+                            <div className="h-100">
+                            <Card.Img variant="top" src={service.img} />
+                            </div>
+                        
+                        <Card.Body>
+                        <Card.Title>{service.name}</Card.Title>
+                        <Card.Text>
+                            <p>{service.description}</p>
+                        </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    </Col>)}
                 </Row>
             </Container>
         </div>
