@@ -4,9 +4,13 @@ This project was bootstrapped with [Create React App](https://guesterra-8e3a4.we
 
 ## About This website
 
-* This website is about hotel booking.
-* Now yoy can reserve room hotel from different location from our website.
-* You can also add some extra services by signing up to our wesite.
-* You can also get some exiciting discounts and offers by booking hotel room our website
-* We provide 24/7 online service.
+* A hotel booking full responsive website with firebase authentication.
+
+* Users can book hotel rooms and also can update or delete their
+reservations.
+
+
+* Admin can approve a reservation and also can delete or update
+reservation status.
+
 
