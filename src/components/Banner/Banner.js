@@ -10,7 +10,7 @@ const Banner = () => {
       return <div className="text-center"><Spinner animation="border" variant="dark" /></div>
     }
     return (
-        <div className="">
+        <div className="banner-container">
                  <Carousel fade>
                         <Carousel.Item>
                             <img

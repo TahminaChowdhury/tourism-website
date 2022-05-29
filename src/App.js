@@ -25,7 +25,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 function App() {
 
   return (
-    <div>
+    <div className="App">
       <AuthProver>
      <Router>
        <Header></Header>
